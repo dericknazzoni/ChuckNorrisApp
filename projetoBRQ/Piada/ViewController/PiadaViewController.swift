@@ -30,9 +30,9 @@ class PiadaViewController: UIViewController {
                 self.loadImage(url: piada.icon_url)
                 
             }
-        }) { (error) in
+        }, onError: { (error) in
             print(error)
-        }
+        }, categoria: Global.name)
 
     }
     

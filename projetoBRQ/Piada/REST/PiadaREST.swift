@@ -18,7 +18,6 @@ enum JokeError {
 
 class PiadaREST {
 
-    private static let basePath = "https://api.chucknorris.io/jokes/random?category=\(Global.name)"
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
         config.allowsCellularAccess = false
@@ -29,10 +28,11 @@ class PiadaREST {
     }()
 
     private static let session = URLSession(configuration: configuration)
+//    static var basePath = "https://api.chucknorris.io/jokes/random?category=\(Global.name)"
 
-
-    class func loadJokes(onComplete: @escaping (Piada) -> Void, onError: @escaping (JokeError) -> Void){
-        guard let url = URL(string: basePath) else {
+    class func loadJokes(onComplete: @escaping (Piada) -> Void, onError: @escaping (JokeError) -> Void, categoria: String){
+        
+        guard let url = URL(string: "https://api.chucknorris.io/jokes/random?category=\(categoria)") else {
             return onError(.url)
         }
         let dataTask = session.dataTask(with: url) { (data: Data?, response: URLResponse?,error: Error?) in

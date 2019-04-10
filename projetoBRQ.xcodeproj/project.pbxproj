@@ -79,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				B00920E9225B8A4B00D1A2FF /* Category.swift */,
-				B0286254225CE62B002AE5A0 /* Global.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +134,7 @@
 		B088C18C2253EEE9005B2A97 /* projetoBRQ */ = {
 			isa = PBXGroup;
 			children = (
+				B0286254225CE62B002AE5A0 /* Global.swift */,
 				B00920E7225B8A4B00D1A2FF /* Categoria */,
 				B00920E3225B8A3200D1A2FF /* Piada */,
 				B088C18D2253EEE9005B2A97 /* AppDelegate.swift */,
